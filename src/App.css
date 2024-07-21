@@ -1,0 +1,98 @@
+/* Ensure no extra margins or paddings */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Ensure the root element takes full width and height */
+#root {
+  width: 100%;
+  height: 100%;
+  max-width: 100%; /* Ensure it doesn’t have any max-width constraints */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #232E39; /* Ensure the background color is consistent */
+}
+
+.progress-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.progress-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white; /* Set text color to white */
+  font-size: 1.2em; /* Adjust text size as needed */
+  text-align: center; /* Center-align text */
+}
+
+.bullet-points {
+  margin-top: 1px;
+  text-align: left; /* Align text to the left */
+  display: inline-block; /* Ensure the container adjusts to content size */
+  max-width: 90%; /* Adjust the width to avoid overflow */
+}
+
+.bullet-points h2 {
+  color: #fff; /* White color for the heading */
+  margin-bottom: 10px;
+}
+
+.bullet-points ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0; /* Remove default margin to avoid extra space */
+}
+
+.bullet-points li {
+  color: #fff; /* White color for the bullet points */
+  margin-bottom: 5px;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.logo {
+  height: 3em;
+  padding: 2em;
+  will-change: filter;
+  transition: filter 300ms;
+  transform: scale(1.3); /* This scales the image to 130% of its original size */
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #ffffffaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 1em;
+}
+
+.read-the-docs {
+  color: #888;
+}
